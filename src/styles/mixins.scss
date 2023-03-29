@@ -1,0 +1,323 @@
+//mixins
+
+@mixin topbar{
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+
+@mixin rightbar{
+    font-size: $medium;
+    .docs{
+        padding-right: 50px;
+        color: $blue;
+    }
+    .bell{
+        height: 16px;
+        padding-right: 25px;
+    }
+    .profileImage{
+        border-radius: 30px;
+        padding: 3px;
+    }
+    p{
+        padding-left: 7px;
+        color: $blue;
+
+    }
+    .profileArrow{
+        padding-left: 5px;
+        padding-right: 30px;
+    }
+}
+
+
+
+
+
+
+
+@mixin switch{
+    color: #213F7D;
+    font-size: $mediumx;
+    .briefcase{
+        height: 10px;
+    }
+
+    .switchText{
+        margin: 0px;
+        padding-right: 5px;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    img{
+        height: 4px;
+        padding-left: 10px;
+    }
+}
+
+
+
+
+
+
+@mixin sidebarList{
+    color: #213F7D;
+    font-size: $medium;
+    
+    img{
+        height: 10px;
+    }
+
+    .dashText{
+        margin: 0px;
+        padding-left: 8px;
+        padding-right: 4px;
+        color: $fadetext; 
+        &:hover{
+            color: #213F7D;
+        }  
+    }
+
+  
+
+    a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+            background: #f6ffff;
+            color: #213F7D;
+        } 
+    }
+    
+    
+
+    
+}
+
+
+
+
+
+
+@mixin backDetails{
+    a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    p{
+        padding-left: 10px;
+        color: $fadetext;
+        font-size: $medium;
+    }
+
+    
+   
+}
+
+
+
+
+
+
+
+@mixin userDetails{
+    display: flex;
+    justify-content: space-between;
+    h1{
+        margin: 0px;
+        font-size: $large;
+        color: #213F7D;
+      
+    }
+
+    .blacklist{
+        border: 2px solid #E4033B;
+        border-radius: 6px;
+        background: none;
+        color: #E4033B;
+        padding:10px;
+        text-align:center;
+        font-weight: bold;
+        font-size: $miniature;
+        cursor: pointer;
+        &:hover{
+            background: #fadae2;
+        }
+    }
+
+    .activate{
+        border: 2px solid #39CDCC;
+        border-radius: 6px;
+        background: none;
+        color: #39CDCC;
+        text-align: center;
+        font-weight: bold;
+        font-size: $miniature;
+        padding: 10px;
+        cursor: pointer;
+        &:hover{
+            background: #cefcfc;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        padding-right: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+@mixin userProfile{
+    .username{
+        display: flex;
+        padding: 1em;
+        img{
+            height: 75px;
+        }
+
+        @media(min-width: 700px){
+            align-items: center;
+            padding-left: 30px 2em;
+
+        }
+    }
+
+    .firstName{
+        color:$blue;
+        padding: 15px 0;
+        h1{
+            margin: 0px;
+            font-size: $large;
+        }
+    
+        p{
+            margin: 0px;
+            font-size: $medium;
+            padding: 4px;
+        }
+
+        @media(min-width:700px) {
+            padding: 25px;
+    
+        }
+
+        
+    }
+
+    .userTier{
+        border-left: 1px solid #b6b6b6;
+        border-right: 1px solid #b6b6b6;
+        align-items: center;
+
+        @media(min-width:700px){
+            padding-left: 20px;
+            padding-right: 20px;
+    
+        }
+
+        p{
+            margin: 0px;
+            font-size: $medium;
+            color: $fadetext;
+            padding: 4px;
+        }
+        img{
+            height: 10px;
+            padding-top: 4px;
+            align-self: center;
+        }
+    }
+
+    .underProfile{
+        font-size: $mediumx;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+        padding-left: 30px;
+        a{
+            text-decoration: none;
+            color: rgb(37, 37, 37);
+            &:hover{
+                border-bottom: 2px solid #39CDCC;
+                color: #39CDCC;
+            }
+        }
+
+        p{
+            margin: 0px;
+            padding: 10px;
+          
+        }
+
+    }
+
+    
+}
+
+
+
+
+@mixin detailedInfo{
+    p{
+        margin: 0px;
+        font-size: $xsmll;
+        color: $fadetext;
+        text-transform: uppercase;
+    }
+
+    h1{
+        font-size: $medium;
+        padding-bottom: 10px;
+        color: $blue;
+    }
+
+    .data{
+        display: grid;
+        border-bottom: 1px solid #b6b6b6;
+        grid-row-gap: 1.5em;
+
+        @media (min-width:700px) {
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 2em;
+            
+        }
+        @media (min-width:900px) {
+            grid-template-columns: repeat(5,1fr);
+            grid-column-gap: 1.5em;
+            
+        }
+
+        
+    }
+
+}
+
+
+
+@mixin grid($cols, $mgn){
+    float: left;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols );
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    &:nth-child(#{$cols}n){
+      margin-right: 0;
+    }
+}

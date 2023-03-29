@@ -1,0 +1,110 @@
+@import "variables";
+@import "mixins";
+
+
+
+//variables
+
+
+
+$lightblue: #39CDCC;
+$deepblue: #213F7D;
+$fadetext: #545F7D;
+
+
+@mixin redIcon{
+    .redIcon{
+        padding-left: 50px;
+        padding: 25px;
+        
+       
+        p{
+            margin:0px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            font-size: 12px;
+            color: $fadetext;
+        }
+        .number{
+            margin: 0px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #213F7D;
+        }
+        .doubleUser{
+            background: #DF18FF;
+            opacity: 0.1;
+            border-radius: 50%;
+            height: 25px;
+        }
+    }
+}
+
+
+
+
+@mixin Table{
+    table{
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        border-collapse: collapse;
+        td,th{
+            padding: 1em 0.5em;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+            
+        }
+        td{
+            cursor: pointer;
+        }
+    }
+    th{
+        padding: 8px;
+        text-align: left;
+        color: $fadetext;
+        font-size: 12px;
+    }
+}
+
+@mixin media($query){
+    @media screen and (max-width: $query){
+        @content;
+    }
+
+
+}
+
+#userCards{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    @include media(1000px){
+        flex-direction: column;
+        gap: 5px;
+    }
+    .cards{
+        background: #FFFFFF;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        @include redIcon;
+    }
+    
+    .cardWrap{
+        padding-right: 60px;
+    }
+}
+
+#Tables{
+   @include Table;
+    margin-top: 1em;
+   table{
+    
+   }
+}
+
+
+
+

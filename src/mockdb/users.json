@@ -1,0 +1,69 @@
+[
+    {
+
+        "personal":{
+            "id":1,
+            "firstName":"Temilade",
+            "lastName":"Johnson",
+            "email":"dyvvoo@gmail.com",
+            "phone":"+2348040040010",
+            "activeSaving":"30000",
+            "bvn":"07060780922",
+            "gender":"Female",
+            "marital":"Single",
+            "children":"",
+            "education":"B.SC",
+            "accountBalance":200000,
+            "bank":"Providus",
+            "accountNo":"2092670314",
+            "activeLoan":"Nil"
+        },
+        "employment":{
+         "employmentStatus":"Employed","sector":"FinTech",
+         "employmentDuration":"2",
+         "officeEmail":"grace@lendsqr.com","salary":300000,
+         "officeName": "SJULTRA"
+        },
+        "guarantor":{
+            "firstName":"David",
+            "lastName":"Mark",
+            "phone":"+2349040040040",
+            "email":"davemark2@outlook.com",
+            "relationship":"Colleague"
+        }
+    },
+    {
+        "personal":{
+            "id":2,
+            "firstName":"Oreoluwa",
+            "lastName":"Johnson",
+            "email":"dyvvoo@gmail.com",
+            "bvn":"09060680922",
+            "phone":"+2349040040040",
+            "gender":"Male",
+            "marital":"Single",
+            "children":"",
+            "education":"High School",
+            "accountBalance":200000,
+            "bank":"Providus",
+            "accountNo":"2092670314",
+            "activeSaving":"Nil",
+            "activeLoan":"550000"
+        },
+        "employment":{
+         "employmentStatus":"Employed","sector":"FinTech","employmentDuration":"3",
+         "officeEmail":"grace@gmail.com","salary":100500,
+         "officeName": "Prunedge Limited"
+        },
+        "guarantor":{
+            "firstName":"Tobi",
+            "lastName":"Bakare",
+            "phone":"+2349040040040",
+            "email":"davetobi@outlook.com",
+            "relationship":"Colleague"
+        }
+    }
+
+
+
+]

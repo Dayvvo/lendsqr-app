@@ -1,0 +1,229 @@
+@mixin topbar{
+    
+    .lendImg{
+        padding-bottom: 50px;
+    }
+}
+
+
+@mixin login{
+    .loginWrapper{
+        padding-top: 50px;
+        h1{
+            color: $deepblue;
+            font-size: 42px;
+            margin: 0px;
+        }
+
+        p{
+            color: $fadetext;
+        }
+    }
+
+    .detail{
+        font-size: 18px;
+        padding-bottom: 22px;
+
+    }
+
+    .mail{
+        font-size: 12px;
+        margin-bottom: 15px;
+        border: 2px solid rgba(84, 95, 125, 0.15);
+        border-radius: 5px; 
+        p{
+            margin: 0px;
+            padding: 12px;
+            color: $fadetext;
+        }
+    }
+    .input{
+        color: #545F7D;
+        margin-bottom: 12px;
+
+        input{
+            font-size: 12px;
+            border: 2px solid rgba(84, 95, 125, 0.15);
+            border-radius: 5px; 
+            padding: 0.9em 0.6em;
+            min-width: 300px;
+
+
+            @media(min-width: 700px){
+                min-width: 330px;
+
+            }
+        }
+
+        .label{
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.4em;
+        }
+
+
+        >.inputWrapper{
+            position: relative;
+        }
+
+        .showHide{
+            position: absolute;
+            top:0;
+            right:0;
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            cursor: pointer;
+
+        }
+
+
+
+
+    }
+    .password{
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        border: 2px solid rgba(84, 95, 125, 0.15);
+        border-radius: 5px; 
+        margin-bottom: 12px;
+        p{
+            margin: 0px;
+            padding: 12px;
+            color: $fadetext;  
+        }
+
+        .showpassword{
+            margin: 0px;
+            color: $lightblue;
+        }
+    }
+
+    .forgot{
+        color: $lightblue;
+        font-size: 12px;
+        margin-bottom: 22px;
+    }
+
+    .loginButton{
+        margin: 0px;
+        background: $lightblue;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        padding: 12px;
+        border-radius: 5px;
+        width: 100%;
+        outline: none;
+        border-style:none;
+        
+    }
+
+    
+
+}
+
+
+.toast {
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    padding: 1.5em  0;
+    border-radius: 3px;
+    min-width: 300px;
+
+    @media(min-width: 700px){
+        min-width: 35px;
+    }
+
+    .cancel{
+        padding: 0 0.5em;
+    }
+
+    .toastChild{
+        padding: 0 1em;
+        margin-top: 0.5em;
+
+
+    }
+
+    
+}
+
+@mixin media($query){
+    @media screen and (max-width: $query){
+        @content;
+    }
+
+
+}
+
+$lightblue: #39CDCC;
+$deepblue: #213F7D;
+$fadetext: #545F7D;
+
+
+
+div.login{
+    padding: 1em 1.5em;
+}
+
+
+#navbar{
+    padding: 1em 2em;
+    // padding-right: 30px;
+    @include media(1000px){
+        padding: 0px;
+        display: none;  
+    }
+    
+}
+
+#pabloLogin{
+    width: 100%;
+    display: flex;
+    padding-right: 30px;
+    @include media(1000px){
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+
+    img{
+        padding-top: 30px;
+        padding-right: 30px;
+        @include media(1000px){
+            width: 800px;
+        }
+    }
+
+    .logIn{
+        padding-left: 50px;
+        width: 350px;
+        @include login;
+        @include media(1000px){
+            width: 600px;
+            padding: 0px;
+        }
+        .loginWrapper{
+            @include media(1000px){
+                text-align: center;
+            } 
+        }
+
+        .loginButton{
+            cursor: pointer;
+        }
+
+        .forgot{
+            cursor: pointer;
+        }
+
+        .showpassword{
+            cursor: pointer;
+        }
+    }
+}
+
