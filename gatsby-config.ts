@@ -23,7 +23,10 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-  ]
+  ],
+  flags:{
+    DEV_SSR:true,
+  }
 
 }
 
