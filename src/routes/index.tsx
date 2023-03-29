@@ -1,7 +1,7 @@
 import React from 'react'
 import { Nav, SideBar } from '../components/dashboard';
 import Wrapper from "../widgets/wrapper";
-import {useStaticQuery,graphql,navigate} from 'gatsby'
+import {navigate} from 'gatsby'
 import useUsersQuery from '../hooks/useUsersQuery';
 
 const Home = () => {
