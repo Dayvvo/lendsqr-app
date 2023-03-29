@@ -8,7 +8,7 @@ const App = () => (
       <PrivateRoute path={'/'} component={Home} />
       <PrivateRoute path="/user" component={User} />
       <PrivateRoute path="/loans" />
-      <User path="/app" />
+      <User path="/app/login" />
     </Router>
 )
 
