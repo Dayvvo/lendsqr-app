@@ -1,14 +1,16 @@
 import React from 'react'
 import { Nav, SideBar, UserInfo } from '../components/dashboard'
 import Wrapper from '../widgets/wrapper'
-import { useStaticQuery, graphql } from 'gatsby';
+// import { useStaticQuery, graphql } from 'gatsby';
 import '../styles/dashboard.scss';
 import useUsersQuery from '../hooks/useUsersQuery';
+// import useSession from '../hooks/useSession';
 
 const User = ({path,location}:{path?:any, location?:any})=>{
 
+    // let session  = useSession();
 
-    const userSession = sessionStorage.getItem('user-object');
+    const userSession = sessionStorage?.getItem('user-object');
 
     const user  = userSession? JSON.parse(userSession):{}
 

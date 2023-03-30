@@ -5,6 +5,7 @@ import {navigate} from 'gatsby'
 import {GrClose,} from 'react-icons/gr';
 import {BsFillCheckCircleFill} from 'react-icons/bs'
 import {BiError} from 'react-icons/bi'
+// import useSession from '../hooks/useSession';
 export interface userObject {
     firstName:string,
     lastName:string,
@@ -17,11 +18,13 @@ export interface userObject {
 
 const Login = ()=>{
 
-    let userCacheRef = useRef(sessionStorage.getItem('user-object'))
+    // let session  = useSession()
 
-    useEffect(()=>{
-        userCacheRef.current && navigate('/admin')
-    },[])
+    // let userCacheRef = useRef(sessionStorage.getItem('user-object'))
+
+    // useEffect(()=>{
+    //     userCacheRef.current && navigate('/admin')
+    // },[])
 
     const [userInput,setUserInput] = React.useState({
         email:'',
@@ -105,7 +108,7 @@ const Login = ()=>{
 
             if (user) {
                 console.log('user found',user);
-                sessionStorage.setItem('user-object',JSON.stringify(user?.node))
+                sessionStorage?.setItem('user-object',JSON.stringify(user?.node))
                 triggerToast('Logged in successfully','success',()=>navigate('/admin/'))
             }
             else{
